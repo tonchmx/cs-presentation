@@ -1,4 +1,4 @@
-# Introducción a C#
+# Introducción a C#.
 
 Presentación hecha por Antonio Cruz utilizando [reveal.js](http://lab.hakim.se/reveal-js/#/)
 
