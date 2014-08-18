@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>C#</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>C#</h1>
+					<p>
+						Antonio Cruz
+					</p>
+				</section>
+				<!-- Tema 1 -->
+				<section>
+					<h2>1 Introducción al lenguaje C# y .NET Framework</h2>
+				</section>
+				<!-- 1.1 -->
+				<section>
+					<h2>1.1 ¿Qué es C#?</h2>
+					<p>
+						<ul>
+							<li class="fragment">Lenguaje orientado a Objetos</li>
+							<li class="fragment">Permite a los desarroladores compilar diversas aplicaciones que se ejecuten en .NET Framework</li>
+						</ul>
+					</p>
+					<aside class="notes">
+						C# es un lenguaje orientado a objetos elegante y con seguidad de tipos que permite a los desarroladores compilar diversas aplicaciones sólidas y seguras que se ejecuten en .NET Framework
+					</aside>
+				</section>
+				<section>
+					<h3>Tipo de aplicaciones en C#</h3>
+					<ul>
+						<li class="fragment">Cliente de Windows tradicionales</li>
+						<li class="fragment">Servicios Web XML</li>
+						<li class="fragment">Componentes distribuidos</li>
+						<li class="fragment">Aplicaciones cliente-servidor</li>
+						<li class="fragment">Aplicaciones de datos</li>
+						<li class="fragment">¡Y mucho, mucho más!</li>
+					</ul>
+				</section>
+				<section>
+					<img src="img/vs_logo.png">
+					<aside class="notes">
+						Visual C# proporciona un editor de código avanzado, cómodos diseñadores de interfaz de usuario, un depurador integrado, y muchas otras herramientas para facilitar el desarrolo de aplicaciones basadas en el lenguaje C# y .NET Framework
+					</aside>
+				</section>
+				<section>
+					<section>
+						<h3>Sintaxis</h3>
+						<ul>
+							<li class="fragment">Basada en signos de llave</li>
+							<li class="fragment">Personas familiarizadas con C, C++ o Java</li>
+							<li class="fragment">Simplifica muchas de las complejidades de C++</li>
+							<li class="fragment">Proporciona caracaterísticas eficaces como:</li>
+							<ul>
+								<li class="fragment">Tipos de valor que admiten valores NULL</li>
+								<li class="fragment">Enumeraciones</li>
+								<li class="fragment">Delegados</li>
+								<li class="fragment">Expresiones Lambda</li>
+								<li class="fragment">Acceso directo a memoria</li>
+							</ul>
+						</ul>
+						<aside class="notes">
+							<p>
+								La sintaxis de C# basada en signos de llave podrá ser reconocida inmediatamente por cauqluier persona familiarizada con C, C++ o Java.
+							</p>
+							<p>
+								La sintaxis de C# simplifica muchas de las complejidades C++ y proporciona características eficaces tales como tipos[...] y accesso directo a memoria, que no se encuentran en Java
+							</p>
+						</aside>
+					</section>
+					<section>
+						<h3>Además...</h3>
+						<p>
+							<ul>
+								<li class="fragment">Admite métodos y tipos genéricos</li>
+								<li class="fragment">Iteradores</li>
+							</ul>
+						</p>
+						<aside class="notes">
+							<p>
+								C# admite métodos y tipos genéricos, que proporcionan mayor rendimiento y seguirdad de tipos, e iterados, que permiten a los implementadores de clases de colección definir comportamientos de iteración personalizados que el código puede utilizar facilmente.
+							</p>
+						</aside>
+					</section>
+					<section>
+						<h3>LINQ</h3>
+						<p>
+							Las exprexiones Language-Integrated Query (LINQ) convierten la consulta fuertemente tipada en una construcción de lenguaje de primera clase
+						</p>
+					</section>
+				</section>
+				<section>
+					<h3>Como lenguaje orientado a objetos</h3>
+					<ul>
+						<li class="fragment">Admite los conceptos de encapsulación, herencia y polimorfismo</li>
+						<li class="fragment">Todas las variables y métodos, incluido el Main, se encapsulan dentro de definiciones de clase</li>
+						<li class="fragment">Una clase puede heredar directamente de una clase primara, pero puede implementar cualquier numero de interfaces</li>
+						<li class="fragment">Una struct es como una clase sencilla, pero que no admite la herencia</li>
+					</ul>
+					<aside class="notes">
+						<p>
+							Como lenguaje orientado a objetos, C# admite los conceptos de encapsulación, herencia y polimorfismo. Todas las variables y metodos, incluido el Método Main que es el punto de entrada de una aplicación, se encapsulan dentro de definiciones de clases.
+							Una clase puede heredar directamente de una clase primara, pero puede implementar cualquier número de interfaces. Los métodos que reemplazan los métodos virtuales en una clase primaria requieren la palabra clave 'override' como medio para evitar redefiniciones accidentales. En C#, una struct es como una clase sencilla; es un tipo asiganado en la pila que puede implementar interfaces pero no admite la herencia.
+						</p>
+					</aside>
+				</section>
+				<section>
+					<h3>Interacción con otro software de Windows</h3>
+					<p>
+						Mediante un proceso denominado "interoperabilidad". La interoperabilidad habilita los programas de C# para que puedan realiza práticamente las mismas tareas que una aplicación C++ nativa.
+					</p>
+					<aside class="notes">
+						Si se necesita interactuar con otro software de Windows, como objetos COM o archivos DLL nativos de Win32, se podrá hacer en C# mediante un proceso denominado "interoperabilidad". La interoperabilidad habilita los programas de C# para que puedan realizar prácticamente las mismas tareas que una aplicación C++ natia. C# admite incluso el uso de punteros y el concepto de código "no seguro" en los casos en que el acceso directo a la memora es totalmente crítico.
+					</aside>
+				</section>
+				<section>
+					<h3>Proceso de compilación</h3>
+					<ul>
+						<li>Simple en comparación con el de Cy C++ y más flexible que en Java.</li>
+						<li>No hay encabezados independientes.</li>
+						<li>No se require que los métodos y los tipos se declaren en un orden determinado.</li>
+					</ul>
+				</section>
+				<!-- /1.1 -->
+				
+				<!-- 1.2 -->
+				<section>
+					<section>
+						<h2>1.2 Arquitectura de la plataforma .NET Framework</h2>
+						<p>
+							Los programas de C# se ejecutan en .NET Framework, componente que forma parte de Windows y que incluye un sistema de ejecución virtual denominado <strong>Common Language Runtime</strong> (CLR) y un conjunto unificado de bibliotecas de clases. CLR es la implementación comercial de Microsoft de CLI (Common Language Infrastructure).
+						</p>
+						<aside class="notes">
+							CLI es un estándar internacional que constituye la base para crear entronos de ejecución y desarrolo en que los lenguajes y las bibliotecas trabajan juntos sin ningún problema.
+						</aside>
+					</section>
+					<section>
+						<p>El código fuente escrito en C# se compila en un lenguaje intermedio (LI). Este codigo y los recursos se almacenan en disco en un archivo ejecutable denominado ensamblado, cuya extensión es .exe o .dll.</p>
+						<aside class="notes">
+							<p>Recursos tales como mapas de bits y cadenas</p>
+							<p>Un ensamblado contiene un manifiesto que proporciona información sobre los tipos, la versión, la referencia cultural y los requisitos de seguridad del ensamblado.</p>
+						</aside>
+					</section>
+					<section>
+						<p>
+							Cuando se ejectua un programa de C#, el ensamblado se carga en CLR. Si se cumplen los requisitos de seguridad, CLR realiza una compilación Just In Time (JIT) para convertir el código de lenguale intermedio en instruccions máquita nativas. El cógido ejecutado por el CLR se denomina algunas veces "código administrado", en contraposición al "código no administrado" que se compila en lenguaje nativo destiando a un sistema específico.	
+						</p>
+						<aside class="notes">
+							Cuando se ejecuta un programa de C#, el ensamblado se carga en CLR, con lo que se pueden realizar diversas acciones en función de la información del manifiesto. A continuación, si se cumplen los requisitos de seguridad, CLR realiza una compilación JIT para convertir el código de LI en instrucciones máquina nativas. CLR también proporciona otros servicios relacionados con la recolección de elementos no utilizados automáticamente, el control de excepciones y la administración de recursos. El cógido ejecutado por el CLR se denomina algunas veces "código administrado", en contraposición al "código no administrado" que se compila en lenguaje nativo destiando a un sistema específico.
+						</aside>
+					</section>
+					<section>
+						<img src="/img/diagrama_net.png" alt="">
+						<small>Diagrama que muestran las relaciones en tiempo de compilación y tiempo de ejecución de los archivos de código fuente de C#, las bibliotecas de clases de .NET Framework, los ensamblados y CLR.</small>
+					</section>
+					<section>
+						<p>
+							La interoperabilidad del lenguaje es una caracteristica clave de .NET Framework. El código de lenguaje intermedio cumple las especificaciones de tipos común (CTS), por lo cual puede interactuar con el código generado en las versiones .NET de Visual Basic, Visual C++ o cualquier de los más de 20 lenguajes conformes a CTS.
+						</p>
+						<aside class="notes">
+							La interoperabilidad del lenguaje es una característica clave de .NET Framework. Como el código de lenguaje intermedio generado por el compilador de C# cumple la especificación de tipos común (CTS), este código generado en C# puede interactuar con el código generado en las versiones .NET de Visual Basic, Visual C++ o cualquiera de los más de 20 lenguajes conformes a CTS. Un único ensamblado puede contener varios módulos escritos en diferentes lenguajes .NET, y los tipos admiten referencias entre sí como si estuvieran escritos en el mismo lenguaje.
+						</aside>
+					</section>
+				</section>
+				<!-- /1.2 -->
+				<!-- /1 -->
+
+				<!-- Tema 2 -->
+				<section>
+					<h2>2 Tipos de datos</h2>
+					<p>
+						C# contiene dos categorías generales de tipos de datos integrados: tipos de valor y tipos de referencia. El término tipo de valor indica que estos tipos contienen directamente sus valores.
+					</p>
+				</section>
+				<section>
+					<h3>2.1 Números enteros</h3>
+					<ul>
+						<li>byte: De 0 a 255.</li>
+						<li>sbyte: De -128 a 127.</li>
+						<li>short: De -32.768 a 32.767.</li>
+						<li>ushort: De 0 a 65.535.</li>
+						<li>int: De -2.147.483.648 a 2.147.483.647. </li>
+						<li>uint: De 0 a 4.294.967.295. </li>
+						<li>long: -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807. </li>
+						<li>ulong: 0 a 18.446.744.073.709.551.615. </li>
+					</ul>
+				</section>
+				<section>
+					<h3>2.2 Coma flotante</h3>
+					<ul>
+						<li>Dos clases: float y double.</li>
+						<li>Double es el más utilizado.</li>
+						<li>El tipo decimal es dirigido al uso de cálculos monetarios.</li>
+					</ul>
+					<aside class="notes">
+						Existen dos clases de tipos de coma flotante: float y double.  El tipo double es el más utilizado porque muchas funciones matemáticas de la biblioteca de clases de C# usan valores double. El tipo decimal es dirigido al uso de cálculos monetarios. La aritmética de coma flotante normal está sujeta a una variedad de errores de redondee cuando se aplica a valores decimales. El tipo decimal elimina estos errores y puede representar hasta 28 lugares decimales. 
+					</aside>
+				</section>
+				<section>
+					<h3>2.3 Caracteres</h3>
+					<p>
+						Usan un tamaño de 16 bits llamado Unicode al caul se le llama char.
+					</p>
+					<h3>2.4 Lógicos</h3>
+					<p>
+						Para los tipos de datos lógicos no existen conversaciones automáticas de tipo entero a bool.
+					</p>
+					<aside class="notes">
+						Los caracteres en C# no tienen un tamaño de 8 bits como en otros lenguajes de programación, sino que usa un tamaño de 16 bits llamado Unicode al cual se le llama char. No existen conversiones automáticas de tipo entero a char.
+					</aside>
+				</section>
+				<!-- /2 -->
+				<!-- Tema 3 -->
+				<section>
+					<h2>3 Dentro de un programa de C#</h2>
+				</section>
+				<section data-markdown >
+					<script type="text/template">
+					### 3.1 Hello, World!
+					```
+					using System;
+					public class HelloWorld
+					{
+						public static void Main(string[] args)
+						{
+							Console.WriteLine("Hello, World!");
+							
+							//Esperamos a que se presione alguna tecla para salir del programa
+							Console.WriteLine("Presione cualquier tecla para salir.");
+							Console.ReadKey();
+						}
+					}
+					```
+					</script>
+					
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+					#### 3.1.1 Comentarios
+					Para escribir comentarios se usan los caracteres //
+					```
+					// Este es un comentario
+					```
+					Para escribir comentarios de texto, éste se debe de incluir entre los caracteres /\* y \*/
+					```
+					/*
+						Este
+						es un comentario
+						en bloque
+					*/
+					```
+					</script>
+				</section>
+				<section>
+					<section>
+						<h4>3.1.2 Método principal</h4>
+						<p>Una aplicación de consola en C# debe contener un método Main, en el cual se inicia y se termina el control. Este método es donde se crean objetos y se ejecutan otros métodos</p>
+					</section>
+					<section>
+						<p>
+							En un programa de C#, sólo puede haber un punto de salida.
+						</p>
+						<p>
+							Si tiene más de una clase con un método Main, debe compilar el programa con la opción del compilador /main para especificar qué método Main se va a utilizar como punto de entrada.
+						</p>
+					</section>
+					<section>
+						Main debe ser éstatico y no debe ser público
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						El método Main es un método static que reside dentro de una clase o un struct. Se puede declarar de una de las maneras siguientes:
+
+						+ Para devolver un void:
+						  ```
+						  static void Main()
+						  {
+						  	// ...
+						  }
+						  ```
+						+ Para devolver un entero:
+						  ```
+						  static int Main()
+						  {
+						  	// ...
+						  	return 0;
+						  }
+						  ```
+						+ Para utilizar argumentos con cualquier de los tipos devueltos:
+						  ```
+						  static void Main(strings[] args)
+						  {
+						  	// ...
+						  }
+						  ```
+						</script>
+					</section>
+					<section>
+						<p>
+							El parámetro del método Main, args, es una matriz de tipo string que contiene los argumetnos de la linea de comandos utilizados para llamar al programa.
+						</p>
+						<p>
+							A diferencia de C++, la matriz no incluye el nombre del archivo ejecutable (exe).
+						</p>
+					</section>
+				</section>
+				<section>
+					<h4>3.1.3 Entrada y salida</h4>
+					<p>
+						Los programas de C# utilizan normalmente los servicios de entrada y salida que ofrece la biblioteca en tiempo de ejecución de .NET Framework.
+					</p>
+					<aside class="notes">
+						La instrucción System.Console.WriteLine(“Hello, World!”); utiliza el método WriteLine. Es uno de los métodos de salida de la clase Console en la biblioteca en tiempo de ejecución. Si incluye la directiva using System; al principio del programa, se pueden utilizar directamente las clases y métodos de System sin escribir el nombre completo.
+					</aside>	
+				</section>
+				<section>
+					<section>
+						<h3>3.2 Estructura general de un programa en C#</h3>
+						<ul>
+							<li>Pueden constar de uno o varios archivos</li>
+							<li>Contener cero o varios espacios de nombres</li>
+							<li>Un espacio de nombres puede contener tipos como clases, structs, interfaces, enumeraciones y delegados, ademas de otros espacios de nombres</li>
+						</ul>
+						<aside class="notes">
+							Los programas en C# pueden constar de uno o varios archivos. Cada archivo puede contener cero o varios espacios de nombres. Un espacio de nombres puede contener tipos como clases, structs, interfaces, enumeraciones y delegados, además de otros espacios de nombres.
+						</aside>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						```
+						using System;
+						namespace YourNamespace
+						{
+							class YourClass
+							{
+								// ...
+							}
+							
+							struct YourStruct
+							{
+								// ...
+							}
+
+							interface IYourInterface
+							{
+								// ...
+							}
+
+							delegate int YourDelegate();
+
+							enum YourEnum
+							{
+								// ...
+							}
+
+							namespace YourNestedNamespace
+							{
+								struct YourStruct
+								{
+									// ...
+								}
+							}
+
+							class YourMainClass
+							{
+								static void main(string[] args)
+								{
+									// Your programa start here...
+								}
+							}
+						}
+						```
+						</script>
+					</section>
+				</section>
+					
+				<section>
+					<section>
+						<h4>3.2.1 Clases</h4>
+						<p>
+							Es una construcción que permite crear tipos personalizados mediante la agrupación de variables de otros tipos, métodos y eventos.
+						</p>
+						<img src="/img/Growth-Hacking-Blueprint.jpg" alt="" style="height:500px;width:700px">
+						<aside class="notes">
+							Una clase es como un plano. Define los datos y el comportamiento de un tipo.
+						</aside>
+					</section>
+					<section>
+						Si la clase no es declarada como estática, el código de cliente puede utlizarla mediante la creacion de <i>objetos</i> o <i>instancias</i> que se asignan a una variable
+						<aside class="notes">
+							La variable permanece en meoria hasta que todas las refrecnais a a ella estén fuera del ambito. En ese momento, CLR la marca como apta para la recolección de elementos no utilizados.
+						</aside>
+					</section>
+					<section>
+						Si la clase es declarada como estática, solo existe una copia en memoria y el codigo de cliente solo puede tener acceso a ella a través de la case propia y no de una variable de instancia.
+					</section>
+					<section>
+						<h4>3.2.1.1 Declarar clases</h4>
+						<p>
+							Las clases se declaran mediante la palabra clave class.
+						</p>
+						<pre>
+							<code>
+public class Customer
+{
+	// Campos, propiedades, métodos y eventos van aquí...
+}
+							</code>
+						</pre>
+						<aside class="notes">
+							El nivel de acceso precede a la palabra clave class. Como, en este caso, se utiliza public, cualquier puede crear objetos a partir de esta clase. El nombre de la clase siguie a la palabra clave class. El resto del a definicion es el cuerpo, donde se definen el comportamiento y los datos. Los campos, propiedades, métodos y eventos de una clase se conocen colectivamente como miembros de clase.
+						</aside>
+					</section>
+					<section>
+						<h4>3.2.1.2 Crear objetos</h4>
+						<p>
+							Aunque se utilizan de formar intercambiable, una clase y un objeto son cosas diferentes
+						</p>
+						<p>
+							Los objetos se pueden crea con la palabra clave new seguida del nombre de la clase en la que se basará el objeto.
+						</p>
+						<pre>
+							<code>
+Customer object1 = new Customer();
+							</code>
+						</pre>
+						<aside class="notes">
+							Una clase define un tipo de objeto, pero no es propiamente un objeto. Un objeto es una entidad concreta basada en una clase y, aveces, se denomina instancia de una clase.
+						</aside>
+					</section>
+					<section>
+						<p>
+							Cuando se crea una instancia de una clase, una referencia al objeto se vuelve a pasar al programador. Se puede crear una referencia a objeto sin crear un objeto:
+						</p>
+						<code>
+							<pre>
+Customer object2;
+							</pre>
+						</code>
+						<aside class="notes">
+							En el ejemplo anterior, object1 es una referencia a un objeto basado en Customer. Esta referencia apunta al nuevo objeto pero no contien los datos del objeto.
+							No se recomienda crear este tipo de referencias que realmente no apuntan a un objeto existente, ya que al intentar el acceso a un objeto a través de esa referencia se producirá un error en tiempo de ejecución.
+						</aside>
+					</section>
+					<section>
+						<p>
+							Este tipo de referencias se puede crear para hacer referencia a un objeto, ya sea creando un nuevo objeto o asignádonla a un objeto, de la forma siguiente:
+						</p>
+						<pre>
+							<code>
+Customer object3 = new Customer();
+Customer object4 = object3;
+							</code>
+						</pre>
+						<aside class="notes">
+							Este código crea dos referencias a objeto que se refieren al mismo objeto. Por consiguiente, los cambios realizados en el objeto a través del object3 se refejarán en los usos posteriores de object4. Puesto que el acceso a los objetos basados en clases se realiza por referencia, las clases se denominan tipos por referencia.
+						</aside>
+					</section>
+					<section>
+						<h4>3.2.1.3 Herencia de clase</h4>
+						<p>
+							Se realiza a través de una <i>derivación</i>, lo que significa que una clase se declara utilizando una <i>clase base</i> de la cual hereda los datos y comportamiento.
+						</p>
+						
+						<pre>
+							<code>
+public class Manager : Employee
+{
+	// Campos, propiedades, métodos y eventos de Employee son heredados
+	// Nuevos campos, propiedades, metodos y eventos de Manager van aquí...
+}
+							</code>
+						</pre>
+						
+						<aside class="notes">
+							Una clase base se especifica anexando dos puntos y el nombre de la case base a continuación de la clase derivada.
+							Cuando una clase declara una clase base, herada todos los miembros de la case base excepto los constructores.
+						</aside>
+					</section>
+					<section>
+						<p>Una clase se puede declarar como abstracta, la cual contiene métodos abstractos que incluyen una definición de firma pero ninguna implementación. No se pueden crear instancias de las clases abstractas. Solo se pueden utilizar a través de clases derivadas que implementan los métodos abstractos.</p>
+						<p>Por el contrario, una clase sellada (sealed class) no permite que otras clases deriven de ella.</p>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						#### Ejemplo
+						```
+						using System;
+						public class Person
+						{
+							// Campos
+							public string name;
+
+							// Constructor sin argumentos
+							public Person()
+							{
+								name = "desconocido";
+							}
+
+							// Constructor con un argumento
+							public Person(string nm)
+							{
+								name = nm;
+							}
+
+							// Método
+							public void SetName(string newName)
+							{
+								name = newName;
+							}
+						}
+						class TestPerson
+						{
+							static void Main(string[] args)
+							{
+								// Llamada al constructor que no tiene parametros
+								Person person1 = new Person();
+								Console.WriteLine(person1.name);
+								// Asignamos un nuevo nombre
+								person1.SetName("Antonio Cruz");
+								Console.WriteLine(person1.name);
+
+								// Llamada al constructor que tiene un parametro
+								Person person2 = new Person("Peter Parker");
+								Console.WriteLine(person2.name);
+
+								Console.WriteLine("Presione una tecla para salir.");
+								Console.ReadKey();
+							}
+						}
+						// Salida:
+						// desconocido
+						// Antonio Cruz
+						// Peter Parker
+						```
+						</script>
+					</section>
+				</section>
+				
+			</div><!-- Slides -->
+
+		</div><!-- reveal -->
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
