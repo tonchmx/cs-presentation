@@ -758,6 +758,152 @@ Console.WriteLine("Hello World!");
 						</script>
 					</section>
 				</section>
+				<section>
+					<section>
+						<h4>3.2.4 Interfaces</h4>
+						<ul>
+							<li>Una interfaz contiene las definicioens de un grupo de funciones relacionadas que una clase o struct pueda implementar.</li>
+							<li>Mediante las interfaces, puede incluir comportamiento de varios orígenes en una clase.</li>
+							<li>Además, debe usar una interfaz para simular la herencia para los structs.</li>
+							<li>Se declara con la palabra clave interface</li>
+						</ul>
+						<aside class="notes">
+							<ul>
+								<li>2 Esa función es importante en C# porque el lenguaje no admite la herencia múltiple de clases.</li>
+								<li>3 Por que no pueden heredar realmente de otro struct o clase.</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<h5>Las interfaces...</h5>
+						<ul>
+							<li>Pueden contener métodos, propiedades, eventos, indizadores, o cualquier combinación de estos cuatro tipos de miembros.</li>
+							<li>No pueden contener constantes, campos, operadores, constructores de instancia, destructores, o tipos.</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li>Los miembros de interfaz son automáticamente públicos, y no pueden incluir ningun modificador de acceso.</li>
+							<li>Los miembros tampoco pueden ser estáticos.</li>
+							<li>Para implementar un miembro de interfaz, el miembro correspondiente de la clase que implementa debe ser público, no estático, y tiene el mismo nombre y firma el miembro de interfaz.</li>
+						</ul>
+					</section>
+					<section>
+						<h5>Resumen</h5>
+						<ul>
+							<li>Una interfaz es como una clase base abstracta.</li>
+							<li>Una interfaz no puede ser instanciada directamente.</li>
+							<li>Las interfaces pueden contener evento, métodos, indizadores y propiedades.</li>
+							<li>Las interfaces no contiene implementaciones de métodos.</li>
+							<li>Una clase o struct puede implementar varias interfaces.</li>
+						</ul>
+						<aside class="notes">
+							<li>1 Cualquier clase o struct que implemente la interfaz debe implmenetar todos sus miembros.</li>
+							<li>2 Cualquier clase o struct implementan sus mientros que implementa la interfaz.</li>
+							<li>5 Una clase puede heredar una clase base y también implementar una o más interfaces.</li>
+						</aside>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						##### Creando las interfaces
+						```
+						namespace interfaces
+						{
+							interface IEnglishDimensions
+							{
+								float Length();
+								float Width();
+							}
+
+							interface IMetricDimensions
+							{
+								float Length();
+								float Width();
+							}
+						}
+
+						```
+						</script>						
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						##### Heredando las interfaces
+						```
+						using System;
+						using interfaces;
+
+						namespace nCaja
+						{
+							public class Caja: IEnglishDimensions, IMetricDimensions
+							{
+
+								float lengthInches;
+								float widthInches;
+
+								public Caja (float length, float width)
+								{
+									lengthInches = length;
+									widthInches = width;
+								}
+								// Implementación explicita de los miembros de IEnglishDimensions
+								float IEnglishDimensions.Length()
+								{
+									return lengthInches;
+								}
+								float IEnglishDimensions.Width()
+								{
+									return widthInches;
+								}
+
+								// Implementacion explicita de los miembros de IMetricDimensions
+								float IMetricDimensions.Length()
+								{
+									return lengthInches * 2.54f;
+								}
+								float IMetricDimensions.Width()
+								{
+									return widthInches * 2.54f;
+								}
+
+							}
+						}
+						```
+						</script>						
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						##### Usando las interfaces
+						```
+						using System;
+						using nCaja;
+						using interfaces;
+
+
+						class MainClass
+						{
+							public static void Main (string[] args)
+							{
+								Caja caja1 = new Caja (30.0f, 30.0f);
+
+								// Declaramos la instancia de la Interfaz de Unidades Inglesa
+								IEnglishDimensions eDimensions = (IEnglishDimensions)caja1;
+
+								// Declaramos la instancia de la Interfaz de Unidades Métricas
+								IMetricDimensions mDimensions = (IMetricDimensions)caja1;
+
+								// Imprimimos las dimensiones en unidades inglesas
+								Console.WriteLine ("Length(in): {0}", eDimensions.Length ());
+								Console.WriteLine ("Width(in): {0}", eDimensions.Width ());
+
+								// Imprimimos las dimensiones en unidades métricas
+								Console.WriteLine ("Length(cm): {0}", mDimensions.Length ());
+								Console.WriteLine ("Width(cm): {0}", mDimensions.Width ());
+							}
+						}
+						```
+						</script>
+					</section>
+				</section>
 				
 			</div><!-- Slides -->
 
