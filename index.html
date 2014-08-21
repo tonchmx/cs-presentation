@@ -574,6 +574,9 @@ public class Manager : Employee
 						```
 						</script>
 					</section>
+				</section>
+
+				<section>
 					<section>
 						<h4>3.2.2 Structs</h4>
 						<p>
@@ -637,34 +640,37 @@ public struct CoOrds
 					</section>
 					<section data-markdown> 
 						<script type="text/template">
-						Utilizando el struct
-						```
-						using System;
-						// Declarando un nuevo objeto struct sin "new"
-						class TestCoOrdsNoNew
-						{
-							static void Main()
+							Utilizando el struct
+							```
+							using System;
+							// Declarando un nuevo objeto struct sin "new"
+							class TestCoOrdsNoNew
 							{
-								// Declarando un objeto
-								CoOrds coords1;
+								static void Main()
+								{
+									// Declarando un objeto
+									CoOrds coords1;
 
-								// Inicializandolo
-								coords1.x = 10;
-								coords1.y = 20;
+									// Inicializandolo
+									coords1.x = 10;
+									coords1.y = 20;
 
+									// Mostrando resultados:
+									Console.WriteLine("CoOrds 1: ");
+									Console.WriteLine("x = {0}, y y = {1}", coords1.x, coords1.y);
 
-								// Mostrando resultados:
-								Console.WriteLine("CoOrds 1: ");
-								Console.WriteLine("x = {0}, y y = {1}", coords1.x, coords1.y);
-
-								Console.WriteLine("Presione cualquier tecla para salir.");
-								Console.ReadKey();
+									Console.WriteLine("Presione cualquier tecla para salir.");
+									Console.ReadKey();
+								}
 							}
-						}
-						// Salida: CoOrds 1: x = 10, y= 20
-						```
+							// Salida: CoOrds 1: x = 10, y= 20
+							```
 						</script>						
 					</section>
+				</section>
+				
+				
+				<section>
 					<section>
 						<h4>3.2.3 Espacios de nombres</h4>
 						<p>Los espacios de nombres se utilizan en gran medida en la programación de C# de dos maneras</p>
@@ -685,72 +691,70 @@ Console.WriteLine("Hello World!");
 					</section>
 					<section>
 						<ol start="2">
-							<li>
-								Puede ayudar a controlar el ámbito de clase y nombres de métodos en proyectos de programación grandes.
-							</li>
+							<li>Puede ayudar a controlar el ámbito de clase y nombres de métodos en proyectos de programación grandes.</li>
 						</ol>
 					</section>
 					<section data-markdown>
 						<script type="text/template">
-						##### Creando el nombre de espacio
-						```
-						namespace SampleNamespace
-						{
-							class SampleClass{
-								public void SampleMethod()
-								{
-									System.Console.WriteLine ("SampleMethod inside SampleNamespace");
-								}
-							}
-
-							// Create a nested namespace, and define another class.
-							namespace NestedNamespace
+							##### Creando el nombre de espacio
+							```
+							namespace SampleNamespace
 							{
-								class SampleNestedClass
+								class SampleClass
 								{
-									public void SampleNestedMethod()
+									public void SampleMethod()
 									{
-										System.Console.WriteLine ("SampleMethod inside NestedNamespace");
+										System.Console.WriteLine ("SampleMethod inside SampleNamespace");
+									}
+								}
+
+								// Create a nested namespace, and define another class.
+								namespace NestedNamespace
+								{
+									class SampleNestedClass
+									{
+										public void SampleNestedMethod()
+										{
+											System.Console.WriteLine ("SampleMethod inside NestedNamespace");
+										}
 									}
 								}
 							}
-						}
-						```
+							```
 						</script>
 					</section>
 					<section data-markdown>
 						<script type="text/template">
-						##### Usando los nombres de espacio
-						```
-						using System;
-						using SampleNamespace;
-						using SampleNamespace.NestedNamespace;
+							##### Usando los nombres de espacio
+							```
+							using System;
+							using SampleNamespace;
+							using SampleNamespace.NestedNamespace;
 
-						namespace NamesSpace
-						{
-							class MainClass
+							namespace NamesSpace
 							{
-								public static void Main (string[] args)
+								class MainClass
 								{
-									// Display "SampleMethod inside SampleNamespace"
-									SampleClass outher = new SampleClass ();
-									outher.SampleMethod ();
+									public static void Main (string[] args)
+									{
+										// Display "SampleMethod inside SampleNamespace"
+										SampleClass outher = new SampleClass ();
+										outher.SampleMethod ();
+										// Display "SampleMethod inside SampleNamespace" Withouth using
+										SampleNamespace.SampleClass outher2 = new SampleNamespace.SampleClass ();
+										outher2.SampleMethod ();
 
-									// Display "SampleMethod inside SampleNamespace" Withouth using
-									SampleNamespace.SampleClass outher2 = new SampleNamespace.SampleClass ();
-									outher2.SampleMethod ();
-
-									// Display "SampleMethod inside NestedNamespace" Withouth using
-									SampleNamespace.NestedNamespace.SampleNestedClass inner = new SampleNamespace.NestedNamespace.SampleNestedClass ();
-									inner.SampleNestedMethod ();
-									// Display "SampleMethod inside NestedNamespace"
-									SampleNestedClass inner2 = new SampleNestedClass ();
-									inner2.SampleNestedMethod ();
+										// Display "SampleMethod inside NestedNamespace" Withouth using
+										SampleNamespace.NestedNamespace.SampleNestedClass inner = new SampleNamespace.NestedNamespace.SampleNestedClass ();
+										inner.SampleNestedMethod ();
+										// Display "SampleMethod inside NestedNamespace"
+										SampleNestedClass inner2 = new SampleNestedClass ();
+										inner2.SampleNestedMethod ();
+									}
 								}
 							}
-						}
 
-						```
+							```
 						</script>
 					</section>
 				</section>
